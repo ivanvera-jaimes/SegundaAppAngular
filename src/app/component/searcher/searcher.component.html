@@ -1,0 +1,12 @@
+<h1>Resultados para<small>{{termino}}</small></h1>
+<div class="card-groups">
+    <div class="card" style="width: 18rem;" *ngFor="let product of products; let i=index">
+        <img class="card-img-top" [src]="product.img" [alt]="product.name">
+        <div class="card-body">
+          <h5 class="card-title">{{product.name}}</h5>
+          <p class="card-text">{{product.price}}</p>
+          <p class="card-text">{{product.description}}</p>
+          <button (click)="viewProduct(i)" type="button" class="btn btn-outline-primary btn-block">Ver más</button>
+        </div>
+    </div>
+</div>
